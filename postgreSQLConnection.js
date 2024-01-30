@@ -1,6 +1,6 @@
 import  pg  from 'pg'
-//Esta es una mala practica que estoy realizando para subir el repositorio pero como es una instancia que cree en la nube para este proyecto decidí subir al repositorio este url
-const conString = "postgres://euwfncgk:szWuJ0wYfeTAy6jWauSzVBStu3nWUgEj@kashin.db.elephantsql.com/euwfncgk" 
+//Esta es una mala practica que estoy realizando al subir el repositorio pero como es una instancia que cree en la nube para este proyecto decidí subir al repositorio este url
+const conString = "postgres://euwfncgk:szWuJ0wYfeTAy6jWauSzVBStu3nWUgEj@kashin.db.elephantsql.com/euwfncgk" ;
 const client = new pg.Client(conString);
 await client.connect(function(err) {
   if(err) {
@@ -12,7 +12,6 @@ await client.connect(function(err) {
     }
     console.log(result.rows[0].theTime);
     // >> output: 2018-08-23T14:02:57.117Z
-    
   });
 });
 

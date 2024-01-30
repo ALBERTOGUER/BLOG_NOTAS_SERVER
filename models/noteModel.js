@@ -10,18 +10,19 @@ export const createNote = async (data) => {
             [titulo, autor, fecha, contenido]
         );
         
-        return db.rows
+        return db.rows;
     } catch (e) {
         console.log(e, 'error-----------')
+        return e;
     }
 }
 
 export const getNotes = async () => {
-    
     try {
         const db = await client.query('SELECT * FROM public."Notes"')
-        return db.rows
+        return db.rows;
     } catch (e) {
         console.log(e, 'error-----------!!!')
+        return e;
     }
 }
